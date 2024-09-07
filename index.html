@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitMotors - Carros Futuristas e Sustentáveis</title>
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        window.addEventListener('load', function() {
+            window.scrollTo(0, 0);
+        });
+    </script>
+    <style>
+        nav {
+            width: 100%;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px;
+        }
+
+        .contact-btn {
+            background-color: #007bff00;
+            color: #ffffff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .contact-btn:hover {
+            background-color: #914d00;
+        }
+
+        .product-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            margin: 0 auto;
+            max-width: 1200px;
+            justify-content: center;
+        }
+
+        .product-item {
+            border: 1px solid #cccccc;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        /* Media Queries para redimensionar a barra de navegação */
+        @media (max-width: 768px) {
+            nav ul li {
+                margin: 0 5px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            nav ul li {
+                margin: 0 2px;
+            }
+        }
+        
+        h1 {
+            font-family: 'Verdana', Arial, sans-serif;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <div> 
+            <img src="images/logo-FitMotors.png" class="logo" alt="Logo 1">
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#home">Inicio</a></li>
+                <li><a href="#about">Sobre</a></li>
+                <li><a href="#services">Serviços</a></li>
+                <li><a href="#contact" class="contact-btn">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div>
+        <label for="logo-size">Tamanho da Logo:</label>
+        <input type="range" id="logo-size" name="logo-size" min="50" max="300" value="100">
+    </div>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>FitMotors</h1>
+            <p>Concessionária de carros futuristas e sustentáveis</p>
+            <a href="#services" class="btn">VER SERVIÇOS</a>
+        </div>
+    </section>
+
+    <section id="produtos" class="produtos">
+        <h2 class="section-title">Veículos</h2>
+        <div class="product-list">
+            <div class="product-item" data-id="1">
+                <img src="images/veiculos/tesla-cybertruck.jpg" alt="Tesla Cybertruck">
+                <h3>Tesla Cybertruck</h3>
+                <p>R$ 340.000,00</p>
+            </div>
+            <div class="product-item" data-id="2">
+                <img src="images/veiculos/BYD-Dolphin.jpg" alt="BYD Dolphin">
+                <h3>BYD Dolphin</h3>
+                <p>R$ 179.800,00</p>
+            </div>
+            <div class="product-item" data-id="3">
+                <img src="images/veiculos/EcoVeloz.webp" alt="EcoVeloz">
+                <h3>EcoVeloz</h3>
+                <p>R$ 1.300.000,00</p>
+            </div>
+            <div class="product-item" data-id="4">
+                <img src="images/veiculos/Solara.webp" alt="Solara">
+                <h3>Solara</h3>
+                <p>R$ 1.300.000,00</p>
+            </div>
+            <div class="product-item" data-id="5">
+                <img src="images/veiculos/VerdeLux.webp" alt="VerdeLux">
+                <h3>VerdeLux</h3>
+                <p>R$ 500.000,00</p>
+            </div>
+            <div class="product-item" data-id="6">
+                <img src="images/veiculos/TerraVento.webp" alt="TerraVento">
+                <h3>TerraVento</h3>
+                <p>R$ 1.750.000,00</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="about" class="about">
+        <h2>Sobre Nós</h2>
+        <p>Na FitMotors, estamos comprometidos em oferecer os carros mais inovadores e sustentáveis do mercado.</p>
+    </section>
+
+    <section id="services" class="services">
+        <h2>Nossos Serviços</h2>
+        <ul>
+            <li>Venda de carros elétricos</li>
+            <li>Manutenção de veículos sustentáveis</li>
+            <li>Consultoria em mobilidade urbana</li>
+        </ul>
+    </section>
+
+    <section id="contact" class="contact">
+        <h2>Contato</h2>
+        <form>
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="message">Mensagem:</label>
+            <textarea id="message" name="message" required></textarea>
+            <button type="submit">Enviar</button>
+        </form>
+    </section>
+
+    <section id="vehicle-info">
+        <!-- As informações do veículo serão carregadas aqui -->
+    </section>
+
+    <footer>
+        <p>&copy; 2024 FitMotors. Criado por PedrosoTech - Todos os direitos reservados.</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const vehicleId = urlParams.get('id');
+            const vehicles = {
+                1: {
+                    name: 'Tesla Cybertruck',
+                    price: 'R$ 340.000,00',
+                    image: 'images/veiculos/tesla-cybertruck.jpg',
+                    description: 'Descrição detalhada do Tesla Cybertruck...'
+                },
+                2: {
+                    name: 'Produto 2',
+                    price: 'R$ 200,00',
+                    image: 'images/produto2.jpg',
+                    description: 'Descrição detalhada do Produto 2...'
+                },
+                3: {
+                    name: 'Produto 3',
+                    price: 'R$ 300,00',
+                    image: 'images/produto3.jpg',
+                    description: 'Descrição detalhada do Produto 3...'
+                }
+            };
+
+            const vehicle = vehicles[vehicleId];
+
+            if (vehicle) {
+                document.getElementById('vehicle-info').innerHTML = `
+                    <h2>${vehicle.name}</h2>
+                    <img src="${vehicle.image}" alt="${vehicle.name}">
+                    <p>Preço: ${vehicle.price}</p>
+                    <p>${vehicle.description}</p>
+                `;
+            } else {
+                document.getElementById('vehicle-info').innerHTML = '<p></p>';
+            }
+        });
+    </script>
+</body>
+</html>
