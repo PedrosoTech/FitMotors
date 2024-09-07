@@ -1,0 +1,243 @@
+/* Estilo para o corpo da página */
+body {
+    font-family: Arial, sans-serif, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #222222;
+    color: #fff;
+}
+
+/* Adiciona comportamento de rolagem suave */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Estilo para o cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    height: 60px; /* Ajuste este valor conforme necessário */
+    background-color: #222222;
+    color: #fff;
+    box-shadow: 0 2px 4px #0000006c;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Estilo para o logo no cabeçalho */
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #ffffff;
+    flex-grow: 1; /* Permite que o logo cresça */
+    flex-basis: 0; /* Base inicial de tamanho */
+    flex-shrink: 1; /* Permite que o logo encolha */
+}
+
+/* Estilo para a lista de navegação no cabeçalho */
+header nav {
+    display: flex;
+    flex-grow: 2; /* Permite que a navegação cresça */
+    flex-basis: 0; /* Base inicial de tamanho */
+    flex-shrink: 1; /* Permite que a navegação encolha */
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 150px;
+    flex-grow: 1; /* Permite que a lista cresça */
+    flex-basis: 0; /* Base inicial de tamanho */
+    flex-shrink: 1; /* Permite que a lista encolha */
+}
+
+/* Estilo para os links na lista de navegação */
+header nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 8px 15px;
+}
+
+/* Estilo para o botão de contato */
+.contact-btn {
+    border: 2px solid #ff7300;
+    padding: 8px 15px;
+    border-radius: 5px;
+    flex-grow: 0; /* Não permite que o botão cresça */
+    flex-shrink: 0; /* Não permite que o botão encolha */
+}
+
+/* Estilo para o botão de contato ao passar o mouse */
+.contact-btn:hover {
+    background-color: #a75901;
+    color: #fff;
+}
+
+/* Estilo para a seção hero */
+.hero {
+    background: url('images/car-darkness.gif') no-repeat center center/cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Estilo para o conteúdo da seção hero */
+.hero-content {
+    text-align: center;
+    color: #fff;
+    background: #00000080;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Estilo para o título na seção hero */
+.hero h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+/* Estilo para o parágrafo na seção hero */
+.hero p {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+/* Estilo para os botões */
+.btn {
+    background-color: #222222;
+    color: #a14e09;
+    padding: 7px 13px;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Estilo para os botões ao passar o mouse */
+.btn:hover {
+    background-color: #e47820;
+}
+
+/* Estilo para as seções about, services e contact */
+.about, .services, .contact {
+    padding: 50px 20px;
+    text-align: center;
+    width: 80%; /* Redimensionamento da largura */
+    height: auto; /* Redimensionamento da altura */
+    margin: 0 auto; /* Centraliza horizontalmente */
+    position: relative; /* Define a posição relativa */
+    top: 20px; /* Ajusta a posição a partir do topo */
+}
+
+/* Estilo para os títulos nas seções about, services e contact */
+.about h2, .services h2, .contact h2 {
+    margin-bottom: 20px;
+}
+
+/* Estilo para a lista de serviços */
+.services ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Estilo para os itens da lista de serviços */
+.services ul li {
+    margin: 10px 0;
+}
+
+/* Estilo para o formulário de contato */
+.contact form {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+/* Estilo para os labels no formulário de contato */
+.contact form label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* Estilo para os inputs e textarea no formulário de contato */
+.contact form input, .contact form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+/* Estilo para o botão no formulário de contato */
+.contact form button {
+    background-color: #ff6600;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Estilo para o rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px 0;
+    text-align: center;
+}
+
+/* Estilo para logo */
+.logo {
+    width: 100px; /* Ajuste este valor conforme necessário */
+    height: auto;
+}
+
+/* Estilo para os itens do produto */
+.product-item {
+    border: 1px solid #ff6600;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+    transition: transform 0.3s ease; /* Adiciona transição suave */
+}
+
+.product-item:hover {
+    transform: scale(1.50); /* Aumenta o tamanho do item ao passar o mouse */
+}
+
+/* Media queries para redimensionar a barra de navegação */
+@media (max-width: 1200px) {
+    header nav ul {
+        gap: 100px;
+    }
+}
+
+@media (max-width: 992px) {
+    header nav ul {
+        gap: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    header nav ul {
+        gap: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    header nav ul {
+        gap: 5px;
+        /* Remover flex-direction: column; */
+        /* Reduzir o padding dos links de navegação */
+    }
+    header nav ul li a {
+        padding: 5px 10px;
+        font-size: 14px; /* Ajustar o tamanho da fonte */
+    }
+}
